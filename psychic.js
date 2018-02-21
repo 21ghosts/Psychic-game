@@ -19,7 +19,7 @@ var letterToGuess = letters[Math.floor(Math.random() * letters.length)]; // sele
 document.onkeypress = function game(event) 
 {
 
-    var userInput = String.fromCharCode(event.keyCode).toLowerCase(); // this will store my userInput and push it to my guessThusFar array
+    var userInput = String.fromCharCode(event.keyCode).toLowerCase(); // this will store my userInput and push it to my guessThusFar array/ src: StackOverflow
     guessThusFar.push(userInput);
     
 
@@ -38,7 +38,7 @@ document.onkeypress = function game(event)
    else if(userInput !== letterToGuess){ // if userInput should not equal letterToGuess guessCount will decrease by 1
        guessCount--;
    }
-   //this will display all changes and updates to intinded area in html
+   //this will display all changes and updates to intended area in html
     var html = "<h1 class='text-center'>The Psyhcic Game</h1>" + "<hr>" + "<p class='text-center'>Guess the letter:</p>" + "<br>" + 
         "<p class='text-center'>Wins: " + winCount + "</p>" + "<br>" + "<p class='text-center'>Losses: " + lossCount + "</p>" + "<br>" +
         "<p class='text-center'>Remaining guesses: " + guessCount + "</p>" + "<br>" +"<p class='text-center'>Guesses thus far: " + guessThusFar + "</p>";
@@ -47,3 +47,6 @@ document.onkeypress = function game(event)
 }
 
 document.querySelector("#content").innerHTML = html
+
+//Helpful src Timothy Dusterdieck
+//StackOverflow
