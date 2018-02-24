@@ -16,7 +16,7 @@ var guessCount = 8;
 
 var letterToGuess = letters[Math.floor(Math.random() * letters.length)]; // selects random letter on screen load
 
-document.onkeypress = function game(event) 
+document.onkeypress = (event) => 
 {
 
     var userInput = String.fromCharCode(event.keyCode).toLowerCase(); // this will store my userInput and push it to my guessThusFar array/ src: StackOverflow
